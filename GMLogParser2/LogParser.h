@@ -99,10 +99,6 @@ namespace LogParser {
 			catch (std::exception& e) {
 				throw std::runtime_error(std::string("corrupted log file: ") + e.what());
 			}
-
-			if (_records.size() != size) {
-				throw std::runtime_error("expected size " + std::to_string(size) + ", got " + std::to_string(_records.size()));
-			}
 		}
 
 		void Convert(const std::string& out) {
